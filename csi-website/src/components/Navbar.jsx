@@ -8,7 +8,7 @@ const Navbar = () => {
         <div className="flex items-center ml-8"> 
           <img src={logo} alt="CSI VIT Pune" className="h-10 mr-6" />
           <div className="text-white">
-            <span className="font-inter text-xl font-bold">CSIT VIT Pune</span>
+            <span className="font-inter text-xl font-bold">CSI VIT Pune</span>
             <br />
             <span className="font-inter text-sm">Student Branch</span>
           </div>
