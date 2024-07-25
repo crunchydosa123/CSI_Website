@@ -21,7 +21,7 @@ const GradientBG = () => {
         <section id="team" className="py-8">
           <Team />
         </section>
-        <section id="footer" className="py-8">
+        <section id="footer" className="pt-8">
           <Footer />
         </section>
     </div>
