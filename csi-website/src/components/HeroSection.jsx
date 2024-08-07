@@ -2,7 +2,7 @@ import React from 'react'
 
 const HeroSection = () => {
   return (
-    <div className="flex flex-col justify-center items-center h-full text-center text-white">
+    <div className="flex flex-col justify-center items-center h-full text-center text-white pb-20">
         <h1 className="font-inter text-5xl font-bold">
               Building what <span className="text-[#A54657]">matters.</span>
         </h1>

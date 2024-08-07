@@ -9,7 +9,10 @@ const Home = () => {
     <div className="relative h-screen">
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${backgroundImage})` }}
+        style={{ 
+          backgroundImage: `url(${backgroundImage})`,
+          backgroundPosition: 'top', 
+        }}
       >
         <div className="bg-black bg-opacity-50 h-full w-full">
           <Navbar />
