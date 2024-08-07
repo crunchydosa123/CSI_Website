@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from '../../components/Navbar';
-import backgroundImage from '../../assets/images/Team 2024-25.jpg'; 
+import backgroundImage from '../../assets/images/Team_2024-25.jpg'; 
 import Gradient from '../../components/GradientBG'
 import HeroSection from '../../components/HeroSection';
 
