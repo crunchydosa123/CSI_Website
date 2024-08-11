@@ -1,15 +1,15 @@
-import React from 'react'
-import Timeline from './Timeline'
+import React from 'react';
+import Timeline from './Timeline';
 
 const Announcements = () => {
   return (
-    <div>
-        <div className='pl-10 font-inter'>
-        <div className='font-bold text-3xl font-inter flex text-white justify-beginning'>Announcements and Timeline</div>
-        <Timeline />
-        </div>
+    <div className="px-4 sm:px-6 lg:px-10 font-inter">
+      <div className="font-bold text-3xl text-white flex justify-start mb-4">
+        Announcements and Timeline
+      </div>
+      <Timeline />
     </div>
-  )
+  );
 }
 
-export default Announcements
+export default Announcements;

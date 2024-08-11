@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 
 const CircleStickInverted = ({ index, title, date }) => {
   return (
-    <div className="flex items-center pr-10 ml-48">
+    <div className="flex items-center pr-10 ml-48 sm:ml-24 md:ml-48">
       <div className="flex flex-col items-center">
         <div className="w-1 bg-white" style={{ height: '80px' }}></div>
         <div className="bg-white rounded-full text-2xl w-14 h-14 flex font-bold items-center justify-center">{index}</div>
@@ -12,7 +12,7 @@ const CircleStickInverted = ({ index, title, date }) => {
         <div className="text-white">{date}</div>
       </div>
     </div>
-  )
+  );
 }
 
-export default CircleStickInverted
+export default CircleStickInverted;

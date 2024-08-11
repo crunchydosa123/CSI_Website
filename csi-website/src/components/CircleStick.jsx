@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 
-const CircleStick = ({index, title, date}) => {
+const CircleStick = ({ index, title, date }) => {
   return (
-    <div className="flex flex-col items-center mt-4 mr-48">
+    <div className="flex flex-col items-center mt-4 mr-48 sm:mr-24 md:mr-48">
       <div className="flex items-start">
         <div className="flex flex-col items-center">
           <div className="bg-white rounded-full text-2xl w-14 h-14 flex font-bold items-center justify-center">{index}</div>
@@ -14,7 +14,7 @@ const CircleStick = ({index, title, date}) => {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default CircleStick
+export default CircleStick;
