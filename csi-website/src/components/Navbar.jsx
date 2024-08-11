@@ -25,14 +25,14 @@ const Navbar = () => {
             {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
           </button>
         </div>
-        <ul className={`lg:flex font-bold font-inter space-x-12 mr-8 ${isOpen ? 'block' : 'hidden'} lg:block`}>
+        <ul className={`lg:flex font-bold font-inter space-x-12 mr-8 ${isOpen ? 'absolute right-0 top-full bg-black text-white p-4 rounded-lg flex flex-col items-center' : 'hidden'} lg:block`}>
           <li className="mt-4 lg:mt-0">
-            <a href="#events" className="text-white hover:text-pink-700 transition duration-300">Events</a>
+            <a href="#events" className="text-white hover:text-pink-700 transition duration-300 ml-14">Events</a>
           </li>
-          <li className="mt-4 lg:mt-0">
+          <li className="mt-4 lg:mt-0 ml-4">
             <a href="#about" className="text-white hover:text-pink-700 transition duration-300">About</a>
           </li>
-          <li className="mt-4 lg:mt-0">
+          <li className="mt-4 lg:mt-0 ml-4">
             <a href="#team" className="text-white hover:text-pink-700 transition duration-300">Team</a>
           </li>
         </ul>
