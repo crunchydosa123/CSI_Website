@@ -1,28 +1,25 @@
 import React from 'react';
 import TeamCard from './TeamCard';
-import ECImage1 from '../assets/images/ECImage1.png';
-import content from '../assets/images/content_secy.jpg'
-import cr from '../assets/images/cr_secy.jpg'
-import web3 from '../assets/images/web3_secy.jpg'
-import web from '../assets/images/web_secy2.png'
-import multimedia from '../assets/images/multimedia_secy2.jpg'
-import publicity1 from '../assets/images/publicity_secy.jpg'
-import publicity2 from '../assets/images/publicity_co_secy2.jpg'
-import spons from '../assets/images/spons_secy.jpg'
-import aesthetics from '../assets/images/aesthetics_secy4.jpg'
-import aiml from '../assets/images/aiml_secy2.jpg'
-import database from '../assets/images/database_secy2.jpg'
-import finance from '../assets/images/finance_secy3.jpg'
-import venue from '../assets/images/op_venue_secy2.jpg'
-import sponsorships from '../assets/images/spons_secy2.jpg'
-
-import president from '../assets/images/president7.jpg'
-import management_head from '../assets/images/management_head2.jpg'
-import tech_head from '../assets/images/tech_head.jpg'
-import treasurer from '../assets/images/treasurer2.jpg'
-import suyash from '../assets/images/vp_suyash2.png'
-import madhur from '../assets/images/vp_madhur.jpg'
 import TeamVertical from './TeamVertical';
+import president from '../assets/images/president7.jpg';
+import management_head from '../assets/images/management_head2.jpg';
+import tech_head from '../assets/images/tech_head.jpg';
+import treasurer from '../assets/images/treasurer2.jpg';
+import suyash from '../assets/images/vp_suyash2.png';
+import madhur from '../assets/images/vp_madhur.jpg';
+import aesthetics from '../assets/images/aesthetics_secy4.jpg';
+import aiml from '../assets/images/aiml_secy2.jpg';
+import web3 from '../assets/images/web3_secy.jpg';
+import content from '../assets/images/content_secy.jpg';
+import cr from '../assets/images/cr_secy.jpg';
+import database from '../assets/images/database_secy2.jpg';
+import finance from '../assets/images/finance_secy3.jpg';
+import multimedia from '../assets/images/multimedia_secy2.jpg';
+import venue from '../assets/images/op_venue_secy2.jpg';
+import sponsorships from '../assets/images/spons_secy2.jpg';
+import publicity1 from '../assets/images/publicity_secy.jpg';
+import publicity2 from '../assets/images/publicity_co_secy2.jpg';
+import web from '../assets/images/web_secy_final.png';
 
 const Team = () => {
   const singleMembers = [
@@ -51,22 +48,43 @@ const Team = () => {
   ];
 
   return (
-    <div className="flex mt-20 ml-80 justify-center">
-      <div className="flex flex-col w-3/4">
+    <div className="flex flex-col md:flex-row justify-center mt-20 px-4 md:px-0">
+      <div className="flex flex-col w-full md:w-2/4 md:ml-72">
         {singleMembers.map((member, index) => (
-          <div key={index} className={`flex ${index % 2 === 0 ? 'flex-row-reverse' : 'flex-row'} my-2 items-center`}>
+          <div
+            key={index}
+            className={`flex flex-col md:flex-row ${index % 2 === 0 ? 'md:flex-row-reverse' : 'md:flex-row'} my-2 items-center md:items-start`}
+            style={{ margin: '0.5rem 0' }}
+          >
             <TeamCard imageurl={member.image} title={member.title} />
-            <h3 className={`text-white text-2xl font-bold ${index % 2 === 0 ? 'mr-4 ml-8' : 'ml-4 mr-8'}`}>{member.name}</h3>
+            <h3
+              className={`text-white text-2xl font-bold ${index % 2 === 0 ? 'md:mr-2 md:ml-4' : 'md:ml-2 md:mr-4'} mt-2 md:mt-0`}
+            >
+              {member.name}
+            </h3>
           </div>
         ))}
 
         {pairedMembers.reduce((acc, member, index) => {
           if (index % 2 === 0) {
             acc.push(
-              <div key={index} className={`flex ${index % 4 === 0 ? 'flex-row-reverse space-x-reverse space-x-4' : 'flex-row space-x-4'} my-4 items-center`}>
-                <TeamCard imageurl={member.image} name={member.name} title={member.title} includeNameInside={true} />
+              <div
+                key={index}
+                className={`flex flex-col md:flex-row ${index % 4 === 0 ? 'md:flex-row-reverse space-x-reverse' : 'md:flex-row'} my-4 md:my-4 items-center gap-y-4 md:gap-x-2`} // Increased vertical gap on small devices
+              >
+                <TeamCard
+                  imageurl={member.image}
+                  name={member.name}
+                  title={member.title}
+                  includeNameInside={true}
+                />
                 {index + 1 < pairedMembers.length && (
-                  <TeamCard imageurl={pairedMembers[index + 1].image} name={pairedMembers[index + 1].name} title={pairedMembers[index + 1].title} includeNameInside={true} />
+                  <TeamCard
+                    imageurl={pairedMembers[index + 1].image}
+                    name={pairedMembers[index + 1].name}
+                    title={pairedMembers[index + 1].title}
+                    includeNameInside={true}
+                  />
                 )}
               </div>
             );
@@ -74,11 +92,11 @@ const Team = () => {
           return acc;
         }, [])}
       </div>
-      <div className="w-2/4 mt-10">
+      <div className="hidden md:block w-1/4 mt-10">
         <TeamVertical />
       </div>
     </div>
   );
-}
+};
 
 export default Team;
