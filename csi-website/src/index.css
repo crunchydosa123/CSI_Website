@@ -7,6 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow: -moz-scrollbars-none;
   -ms-overflow-style: none;
+  overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -15,6 +16,16 @@ body::-webkit-scrollbar {
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 100vw; /* Prevent container from exceeding viewport width */
+}
+
+
+nav ul {
+  width: 100%; /* Ensure the menu does not overflow when opened */
 }
 
 code {
