@@ -27,7 +27,7 @@ const Navbar = () => {
         </div>
         <ul className={`lg:flex lg:items-center lg:justify-end font-bold font-inter space-x-12 ${isOpen ? 'absolute top-full left-0 w-full bg-black text-white p-4 rounded-lg flex flex-col items-center' : 'hidden'} lg:static lg:flex-row lg:space-x-12 lg:mr-8`}>
           <li className="mt-4 lg:mt-0">
-            <a href="#events" className="text-white hover:text-pink-700 transition duration-300">Events</a>
+            <a href="#events" className="text-white hover:text-pink-700 transition duration-300 sm:ml-12">Events</a>
           </li>
           <li className="mt-4 lg:mt-0">
             <a href="#about" className="text-white hover:text-pink-700 transition duration-300">About</a>

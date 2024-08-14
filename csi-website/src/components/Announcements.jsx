@@ -10,6 +10,6 @@ const Announcements = () => {
       <Timeline />
     </div>
   );
-}
+};
 
 export default Announcements;
