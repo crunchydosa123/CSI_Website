@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 
 export const CirclePhoto = ({ imageurl, title, desc }) => {
   return (
-    <div className='mt-10 flex flex-col justify-around'>
-      <div className="w-48 h-48 rounded-full overflow-hidden border-2 ml-2 ">
+    <div className='mt-10 flex flex-col items-center'>
+      <div className="w-48 h-48 rounded-full overflow-hidden border-2">
         <img 
           src={imageurl}
           className="w-full h-full object-cover" 
