@@ -48,7 +48,10 @@ const Team = () => {
   ];
 
   return (
-    <div className="flex flex-col md:flex-row justify-center mt-20 px-4 md:px-0">
+    <div className="flex flex-col md:flex-row justify-center px-4 md:px-0 items-start">
+      <div className="md:hidden mb-4">
+        <TeamVertical />
+      </div>
       <div className="flex flex-col w-full md:w-2/4 md:ml-72">
         {singleMembers.map((member, index) => (
           <div
