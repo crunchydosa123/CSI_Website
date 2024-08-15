@@ -4,7 +4,6 @@ const CircleStickInverted = ({ index, title, date }) => {
   return (
     <div className="flex flex-col items-center sm:flex-row sm:items-start mt-4">
       <div className="flex flex-col items-center" style={{ marginTop: '-17px' }}>
-        {/* Visible only on medium and larger screens */}
         <div className="w-1 bg-white hidden md:block" style={{ height: '80px' }}></div>
         <div className="bg-white rounded-full text-2xl w-14 h-14 flex font-bold items-center justify-center">{index}</div>
       </div>
