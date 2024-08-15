@@ -6,7 +6,7 @@ import kunekar from '../assets/images/kunekar.jpeg';
 
 const About = () => {
   return (
-    <div className='w-full flex flex-col md:flex-row mt-10 pb-10'>
+    <div className='w-full flex flex-col md:flex-row pb-10'>
       <div className='flex flex-col pt-10 md:w-1/3'>
         <AboutVertical />
       </div>
