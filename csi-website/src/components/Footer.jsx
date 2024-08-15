@@ -18,7 +18,6 @@ const Footer = () => {
             <ul>
               <li>csi@vit.edu</li>
               <li>+91 90286 52004</li>
-              <li>987654321</li>
             </ul>
           </div>
           <div>
