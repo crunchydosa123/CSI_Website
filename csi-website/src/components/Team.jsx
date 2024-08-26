@@ -11,7 +11,7 @@ import aesthetics from '../assets/images/aesthetics_secy4.jpg';
 import aiml from '../assets/images/aiml_secy2.jpg';
 import web3 from '../assets/images/web3_secy.jpg';
 import content from '../assets/images/content_secy.jpg';
-import cr from '../assets/images/cr_secy.jpg';
+import cr from '../assets/images/cr_secy2.jpg';
 import database from '../assets/images/database_secy2.jpg';
 import finance from '../assets/images/finance_secy3.jpg';
 import multimedia from '../assets/images/multimedia_secy2.jpg';
@@ -40,7 +40,7 @@ const Team = () => {
     { image: database, name: "Aryaa Sharma", title: "Database Secretary" },
     { image: finance, name: "Manas Patil", title: "Finance Secretary" },
     { image: multimedia, name: "Purva Rathi", title: "Multimedia Secretary" },
-    { image: venue, name: "Sanket Palkar", title: "Operations and Venue Secretary" },
+    { image: venue, name: "Sanket Palkar", title: "Operations & Venue Secretary" },
     { image: sponsorships, name: "Manasvi Patil", title: "Sponsorships Secretary" },
     { image: publicity1, name: "Janhavi Mhaske", title: "Publicity Co-Secretary" },
     { image: publicity2, name: "Sanidhya Tiwari", title: "Publicity Co-Secretary" },
@@ -49,56 +49,63 @@ const Team = () => {
 
   return (
     <div className="flex flex-col md:flex-row justify-center px-4 md:px-0 items-start">
-      <div className="md:hidden mb-4">
-        <TeamVertical />
+  <div className="md:hidden mb-4">
+    <TeamVertical />
+  </div>
+  <div className="flex flex-col w-full md:w-2/4 md:ml-72">
+    {singleMembers.map((member, index) => (
+      <div
+        key={index}
+        className={`flex flex-col md:flex-row ${index % 2 === 0 ? 'md:flex-row-reverse' : 'md:flex-row'} my-2 items-center md:items-start`}
+        style={{ margin: '0.5rem 0' }}
+      >
+        <div className="w-64"> {/* Enforce consistent width */}
+          <TeamCard imageurl={member.image} title={member.title} />
+        </div>
+        <h3
+          className={`text-white text-2xl font-bold ${index % 2 === 0 ? 'md:mr-2 md:ml-4' : 'md:ml-2 md:mr-4'} mt-2 md:mt-0`}
+        >
+          {member.name}
+        </h3>
       </div>
-      <div className="flex flex-col w-full md:w-2/4 md:ml-72">
-        {singleMembers.map((member, index) => (
+    ))}
+
+    {pairedMembers.reduce((acc, member, index) => {
+      if (index % 2 === 0) {
+        acc.push(
           <div
             key={index}
-            className={`flex flex-col md:flex-row ${index % 2 === 0 ? 'md:flex-row-reverse' : 'md:flex-row'} my-2 items-center md:items-start`}
-            style={{ margin: '0.5rem 0' }}
+            className={`flex flex-col md:flex-row ${index % 4 === 0 ? 'md:flex-row-reverse space-x-reverse' : 'md:flex-row'} my-4 md:my-4 items-center gap-y-4 md:gap-x-2`}
           >
-            <TeamCard imageurl={member.image} title={member.title} />
-            <h3
-              className={`text-white text-2xl font-bold ${index % 2 === 0 ? 'md:mr-2 md:ml-4' : 'md:ml-2 md:mr-4'} mt-2 md:mt-0`}
-            >
-              {member.name}
-            </h3>
-          </div>
-        ))}
-
-        {pairedMembers.reduce((acc, member, index) => {
-          if (index % 2 === 0) {
-            acc.push(
-              <div
-                key={index}
-                className={`flex flex-col md:flex-row ${index % 4 === 0 ? 'md:flex-row-reverse space-x-reverse' : 'md:flex-row'} my-4 md:my-4 items-center gap-y-4 md:gap-x-2`} // Increased vertical gap on small devices
-              >
+            <div className="w-64"> {/* Enforce consistent width */}
+              <TeamCard
+                imageurl={member.image}
+                name={member.name}
+                title={member.title}
+                includeNameInside={true}
+              />
+            </div>
+            {index + 1 < pairedMembers.length && (
+              <div className="w-64"> {/* Enforce consistent width */}
                 <TeamCard
-                  imageurl={member.image}
-                  name={member.name}
-                  title={member.title}
+                  imageurl={pairedMembers[index + 1].image}
+                  name={pairedMembers[index + 1].name}
+                  title={pairedMembers[index + 1].title}
                   includeNameInside={true}
                 />
-                {index + 1 < pairedMembers.length && (
-                  <TeamCard
-                    imageurl={pairedMembers[index + 1].image}
-                    name={pairedMembers[index + 1].name}
-                    title={pairedMembers[index + 1].title}
-                    includeNameInside={true}
-                  />
-                )}
               </div>
-            );
-          }
-          return acc;
-        }, [])}
-      </div>
-      <div className="hidden md:block w-1/4 mt-10">
-        <TeamVertical />
-      </div>
-    </div>
+            )}
+          </div>
+        );
+      }
+      return acc;
+    }, [])}
+  </div>
+  <div className="hidden md:block w-1/4 mt-10">
+    <TeamVertical />
+  </div>
+</div>
+
   );
 };
 
