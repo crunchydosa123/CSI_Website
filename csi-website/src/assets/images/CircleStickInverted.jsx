@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CircleStickInverted = ({ index, title, date }) => {
+const CircleStickInverted = ({ index, title, date, venue, time }) => {
   return (
     <div className="flex flex-col items-center sm:flex-row sm:items-start mt-4">
       <div className="flex flex-col items-center" style={{ marginTop: '-17px' }}>
@@ -10,6 +10,8 @@ const CircleStickInverted = ({ index, title, date }) => {
       <div className="ml-4 flex flex-col justify-start text-center sm:text-left">
         <div className="font-bold text-white">{title}</div>
         <div className="text-white">{date}</div>
+        <div className="text-white">{venue}</div>
+        <div className="text-white">{time}</div>
       </div>
     </div>
   );
