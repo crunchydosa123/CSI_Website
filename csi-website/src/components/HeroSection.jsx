@@ -11,11 +11,8 @@ const HeroSection = () => {
         We’re all about ideating, envisioning, debugging, and ultimately - building what matters!
       </p>
       <div className='flex flex-col justify-center items-center md:flex'>
-      <button className="mt-8 px-6 py-3 sm:px-8 sm:py-3 md:px-10 md:py-4 bg-gray-500 bg-opacity-50 rounded-lg text-white hover:bg-pink-700 transition duration-300">
-            Thank you for attending MLOps Speaker Session on 5 Aug 2024!
-      </button>
       <button className="mt-8 px-6 mx-5 py-3 sm:px-8 sm:py-3 md:px-10 md:py-4 bg-gray-500 bg-opacity-50 rounded-lg text-white hover:bg-pink-700 transition duration-300" onClick={() => window.open('https://codeflix2025.csivitpune.com/')}>
-            CodeFlix2025 is live! Register now!
+            CodeFlix2025 is live!
       </button>
       </div>
     </div>
